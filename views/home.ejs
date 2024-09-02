@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+  <input id="dog-name" placeholder="Name the Dog"/>
+  <button onClick = "submit()">Submit Name</button>
+  <button onClick = "window.location.reload()">Refresh</button>
+  <br><br>
+  <img style = "width: 20vw", src="<%= image %>" , alt="Dog Image" />
+  <p id = "name">Name: </p>
+
+</html>
+
+<script>
+  function submit() {
+    let dogNameInput = document.getElementById("dog-name")
+    let dogName = document.getElementById("dog-name").value;
+    let text = document.getElementById("name");
+    text.textContent = "Name: " + dogName;
+    dogNameInput.value = "";
+  }
+</script>
